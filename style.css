@@ -191,19 +191,22 @@ footer {
     }
 
     .cards .card .texto-card p {
-        font-size: 0.5em;
+        font-size: 0.6em;
         text-align: center;
     
     }
 
-    .form-section  {
+    .form-section, .form-section-conta  {
         padding: 35px;
           
     }
 
     .form-section-conta {
-        width: 100%;
         display: flex;
+        padding: 50px;
+        width: 100%;
+        height: 800px;
+        justify-content: center;
     }
 
     #cuenta {
@@ -212,18 +215,14 @@ footer {
         align-items: center;
     }
 
-    #contactos {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
+    
     .form {
         width: 70%;
         margin: auto;
     }
 
     .form-conta {
-        width: 60%;
+        width: 70%;
         margin: auto;
         margin-bottom: 40px;
         
@@ -237,7 +236,7 @@ footer {
 @media screen and (min-width: 768px) {
     .container {
         width: 100%;
-        min-width: 720px;
+        max-width: 1500px;
     }
 
     .navbar-light .navbar-toggler-icon {
@@ -395,7 +394,7 @@ footer {
     .cards .card .texto-card p {
         font-weight: 200;
         padding-top: 5px;
-        font-size: 1em;
+        font-size: 1em !important;
     
     }
    
@@ -406,16 +405,12 @@ footer {
        
     }
 
-    #contactos {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .form {
         width: 30%;
+        height: max-content;
     }
 
-    .form-section, .form-section-conta {
+    .form-section {
         display: flex;
         grid-auto-flow: row;
         grid-template-columns: max-content;
@@ -423,9 +418,23 @@ footer {
         padding: 80px;
     }
 
+    .form-section-conta {
+        display: flex;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr ;
+        justify-content: center;
+        height: 900px;
+        margin-top: 8%;
+    }
+
     .form-conta {
         width: 100%;
         margin: 10px;
+        height: max-content;
+    }
+
+    .container-fluid {
+        width: 100%;
     }
     
    
@@ -703,18 +712,19 @@ nav {
 
 .cards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
 }
 
 .cards .card {
     background: rgb(121, 156, 221);
     display: flex;
+    flex-wrap: wrap;
     width: 45%;
     height: 200px;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 5px;
-    box-shadow: 0 0 6px 0 rgb(0, 0, 0, .5);
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0, .5) !important;
 
 }
 
@@ -735,30 +745,25 @@ nav {
 
 #cuenta, #contactos {
     width: 100%;
-    background: -webkit-linear-gradient(to right, hsla(28, 85%, 58%, 0.46), hsla(199, 85%, 42%, 0.467)), url(./Assets/tecnology.jpg);
-    background: linear-gradient(to right, hsla(28, 85%, 58%, 0.467), hsla(199, 85%, 42%, 0.46)), url(./Assets/tecnology.jpg);
+    background: -webkit-linear-gradient(to right, hsla(28, 85%, 58%, 0.267), hsla(199, 85%, 42%, 0.267)), url(./Assets/datacenter.gif);
+    background: linear-gradient(to right, hsla(28, 85%, 58%, 0.267), hsla(199, 85%, 42%, 0.267)), url(./Assets/datacenter.gif);
     background-size: cover;
     background-attachment: fixed;
     position: relatiave;
 }
 
 
-.form-section-conta {
-    grid-template-columns: 100%;
-}
-    
-
 .form, .form-conta {
     max-width: 500px;
     border-radius: 1em;
     padding: 3em 2.5em;
     background-color: hsla(0, 0%, 83%, 0.309);
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 
 .form-conta {
-    margin-top: 10%;
+    margin-top: 10px;
 }
 
 .form-container, .form-container-conta {
