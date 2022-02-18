@@ -224,13 +224,7 @@ footer {
         justify-content: center;
     }
 
-    #cuenta {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
-
-    
+     
     .form {
         margin: auto;
         max-width: 300px;
@@ -264,7 +258,7 @@ footer {
     #grid, #grid__prod, #grid__nos {
         width: 100%;
         max-width: 1500px;
-        height: 300vh;
+        height: 210vh;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -434,13 +428,6 @@ footer {
     
     }
    
-    #cuenta {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-       
-    }
-
     .form {
        height: max-content;
     }
@@ -463,7 +450,7 @@ footer {
     }
 
     .form-conta {
-        width: 40%;
+        width: 30%;
         margin: 10px;
         height: max-content;
     }
@@ -792,7 +779,7 @@ nav {
     border-radius: 1em;
     padding: 3em 2.5em;
     background-color: hsla(0, 0%, 83%, 0.309);
-    margin-top: 30px;
+    margin: 30px 20px;
 }
 
 
