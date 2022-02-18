@@ -36,7 +36,7 @@ footer {
     #grid, #grid__prod, #grid__nos {
         width: 100%;
         max-width: 768px;
-        height: 800px;
+        height: 900px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -44,13 +44,18 @@ footer {
         grid-template-areas:
             "header"
             "conte"
-            "footer";
+            "footer" !important; 
     }
 
     #contenido {
         width: 100%;
         max-height: max-content;
         
+    }
+
+    .container {
+        width: 100%;
+        max-width: 768px;
     }
 
     .hero {
@@ -91,6 +96,10 @@ footer {
         width: 100%;
     }
 
+    .info-prod {
+       height: 10vh;
+    }
+
     .portafolio,
     .staff,
     .tablas,
@@ -120,6 +129,11 @@ footer {
 
     .img-proye {
         grid-area: proye;
+    }
+
+    .img-port>img {
+        width: 9rem;
+        height: 9rem;
     }
 
     footer {
@@ -219,19 +233,33 @@ footer {
     
     .form {
         margin: auto;
+        max-width: 300px;
     }
 
     .form-conta {
         margin: auto;
-        
-        
+        max-width: 300px;
     }
+
+    .form-section, .form-section-conta  {
+        padding: 35px;
+          
+    }
+
+    .form-section-conta {
+        display: flex;
+        padding: 50px;
+        width: 100%;
+        height: 800px;
+        justify-content: center;
+    }
+
     ol {
         padding: 0;
     }
     
 }
-
+/*
 @media screen and (min-width: 768px) {
     .container {
         width: 100%;
@@ -248,15 +276,85 @@ footer {
         border-color: rgb(255 184 123);
         color: rgb(255 184 123) !important;
     }
+
+    footer {
+        width: 100%;
+        height: 250px;
+        max-height: max-content;
+        background-color: #414141;
+        padding: 30px 0 15px 0;
+        margin: auto;
+        overflow: hidden;
+    }
     
-}
+    .logo-foo {
+        width: 30px;
+    }
+    
+    .container-foo {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .content-foo {
+        text-align: center;
+    
+    }
+    
+    .content-foo h5 {
+        color: #fff;
+        border-bottom: 3px solid rgb(255, 160, 122);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+    
+    .link-foo {
+        display: flex;
+        text-align: center;
+        list-style: none;
+        
+    }
+    
+    .link-foo a {
+        color: #fff;
+        font-weight: 300;
+        text-decoration: none;
+        margin: 20px;
+        padding: 0 10px 0 10px;
+    }
+    
+    
+    .titulo-final {
+        text-align: center;
+        font-size: 1em;
+        margin: 20px 0 0 0;
+        color: #9e9797;
+    }
+    
+    .form, .form-conta {
+        margin: 60px auto;
+        max-width: 300px;   
+        
+    }
+    
+    .img-port>img {
+        width: 45%;
+        height: 60%;
+    }
+}*/
 
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 769px) {
     #grid, #grid__prod, #grid__nos {
         width: 100%;
         max-width: 1500px;
-        height: 800px;
+        height: 300vh;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -265,6 +363,11 @@ footer {
             "header header header"
             "conte conte conte"
             "footer footer footer";
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1500px;
     }
    
     .hero {
@@ -275,9 +378,24 @@ footer {
         padding: 10px 0;
     }
 
+    .navbar-light .navbar-toggler-icon {
+        background-image: url(./Assets/menu.png);
+        font-size: 30px;
+        
+    }
+
+    .navbar-light .navbar-toggler {
+        border-color: rgb(255 184 123);
+        color: rgb(255 184 123) !important;
+    }
+
     .collapse {
         display: flex;
-        justify-content: flex-end !important;
+        
+    }
+
+    .navbar-collapse {
+        flex-grow: inherit ;
     }
 
     .navbar-brand {
@@ -303,6 +421,10 @@ footer {
     .iframe_info {
         width: 45%;
     }
+
+    .info-prod {
+        height: 15vh;
+    }
     
     .container-text {
         width: 40%;
@@ -322,6 +444,11 @@ footer {
         width: 45%;
         margin: 20px;
         
+    }
+
+    .img-port>img {
+        width: 9rem;
+        height:9rem;
     }
 
     footer {
@@ -405,8 +532,7 @@ footer {
     }
 
     .form {
-        width: 30%;
-        height: max-content;
+       height: max-content;
     }
 
     .form-section {
@@ -596,8 +722,6 @@ nav {
 }
 
 .img-port>img {
-    width: 45%;
-    height: 40%;
     object-fit: cover;
     overflow: hidden;
     position: relative;
@@ -610,9 +734,10 @@ nav {
 }
 
 .text-port {
-    padding: 50px 0px 10px 0px;
+    padding: 30px 0px 30px 0px;
     font-weight: 300;
     text-align: justify;
+    font-size: 0.8em;
 }
 
 /* Productos */
@@ -627,7 +752,6 @@ nav {
 
 .info-prod {
     width: 100%;
-    height: 20vh;
     background-image: linear-gradient(to top, hsla(258, 43%, 68%, 0.289) 0%, rgba(0, 91, 209, 0.344)), url(./Assets/engineering.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -643,6 +767,7 @@ nav {
     grid-auto-columns: inherit;
     gap: 2em;
     text-align: center;
+    align-items: center;
 }
 
 .prod-items {
@@ -653,6 +778,7 @@ nav {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
+    margin: 5px;
 }
 
 .prod-links:hover {
@@ -753,7 +879,6 @@ nav {
 
 
 .form, .form-conta {
-    max-width: 500px;
     border-radius: 1em;
     padding: 3em 2.5em;
     background-color: hsla(0, 0%, 83%, 0.309);
