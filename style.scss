@@ -37,18 +37,7 @@ footer {
 
     #grid,
     #grid__prod,
-    #grid__nos {
-        width: 100%;
-        max-width: 768px;
-        height: 900px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 10px;
-        grid-template-areas:
-            "header"
-            "conte"
-            "footer" !important;
+    #grid__nos { @include Grid_mobile;
     }
 
     #contenido {
@@ -77,8 +66,8 @@ footer {
     }
 
     .navbar-light .navbar-toggler {
-        border-color: $colortitulos;
-        color: $colortitulos !important;
+        border-color: map-get($style, colortitulos);
+        color: map-get($style, colortitulos) !important;
     }
 
     .iframe-container-info {
@@ -109,7 +98,7 @@ footer {
     .tablas,
     .art-parafo {
         padding: 50px;
-        background-color: $colorcontenido;
+        background-color: map-get($style, colorcontenido);
         margin: 40px 20px;
     }
 
@@ -144,7 +133,7 @@ footer {
         width: 100%;
         height: 250px;
         max-height: max-content;
-        background-color: $colorfooter;
+        background-color: map-get($style, colorfooter);
         padding: 30px 0 15px 0;
         margin: auto;
         overflow: hidden;
@@ -168,7 +157,7 @@ footer {
 
         h5 {
             color: #fff;
-            border-bottom: 3px solid $colortitulos;
+            border-bottom: 3px solid map-get($style, colortitulos);
             padding-bottom: 5px;
             margin-bottom: 10px;
             font-weight: 300;
@@ -262,18 +251,7 @@ footer {
 
     #grid,
     #grid__prod,
-    #grid__nos {
-        width: 100%;
-        max-width: 1500px;
-        height: 210vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 10px;
-        grid-template-areas:
-            "header header header"
-            "conte conte conte"
-            "footer footer footer";
+    #grid__nos { @include Grid_desk;
     }
 
     .container {
@@ -296,8 +274,8 @@ footer {
     }
 
     .navbar-light .navbar-toggler {
-        border-color: $colortitulos;
-        color: $colortitulos !important;
+        border-color: map-get($style, colortitulos);
+        color: map-get($style, colortitulos) !important;
     }
 
     .collapse {
@@ -364,7 +342,7 @@ footer {
 
     footer {
         width: 100%;
-        background-color: $colorfooter;
+        background-color: map-get($style, colorfooter);
         padding: 30px 0 15px 0;
         margin: auto;
         overflow: hidden;
@@ -388,7 +366,7 @@ footer {
 
         h5 {
             color: #fff;
-            border-bottom: 3px solid $colortitulos;
+            border-bottom: 3px solid map-get($style, colortitulos);
             padding-bottom: 5px;
             margin-bottom: 20px;
             font-weight: 300;
@@ -547,13 +525,13 @@ nav {
 
 }
 
+
 #index {
     background: $fondoprincipal1, url(./Assets/portada.jpg);
     background: $fondoprincipal2, url(./Assets/portada.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-
 }
 
 .wawe {
@@ -563,7 +541,7 @@ nav {
 }
 
 .titulo {
-    color: $colortitulos;
+    color: map-get($style, colortitulos);
     font-size: 1.5rem;
     text-align: center;
     padding: 30px;
@@ -573,7 +551,7 @@ nav {
 
 .iframe-container-info {
     width: 100%;
-    background-color: $colorcontenido;
+    background-color: map-get($style, colorcontenido);
 }
 
 .iframe_info {
@@ -617,7 +595,7 @@ nav {
 .tablas,
 .art-parafo {
     padding: 30px;
-    background-color: $colorcontenido;
+    background-color: map-get($style, colorcontenido);
     margin: 10px;
 }
 
@@ -685,7 +663,7 @@ nav {
 }
 
 .titulo-staff {
-    color: $colortitulos;
+    color: map-get($style, colortitulos);
     text-align: center;
     margin: 40px;
     font-weight: 500;
@@ -784,7 +762,7 @@ nav {
 .form-conta {
     border-radius: 1em;
     padding: 3em 2.5em;
-    background-color: $colorcontenido;
+    background-color: map-get($style, colorcontenido);
     margin: 30px 20px;
 }
 
@@ -822,7 +800,7 @@ nav {
 .form-submit,
 .form-submit-conta {
     font-family: inherit;
-    background-color: $colortitulos;
+    background-color: map-get($style, colortitulos);
     color: #fff;
     border: none;
     font-weight: 300;

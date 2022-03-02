@@ -1,0 +1,7 @@
+* En el Index le agregue para el SEO una descripcion con la etiquete META:
+<meta name="Description" content="Empresa de desarrollo web y reclutamiento IT, gestion de proyectos a grande escala">
+
+* Adicional se le asigno palabras claves para mejorar nuestro SEO y poder posicionarlo:
+<meta name="keywords" content="web developer, html, css, design web, recruiter IT, proyects, full stack dev, front end, UX/UI">
+
+* Se modificaron los titulos y encabezados de cada pagina.

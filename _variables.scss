@@ -1,5 +1,39 @@
-$colortitulos: rgb(255, 160, 122);
-$colorcontenido: hsla(0, 0%, 83%, 0.309);
-$colorfooter: #414141;
+$style: (
+colortitulos: rgb(255, 160, 122),
+colorcontenido: hsla(0, 0%, 83%, 0.309),
+colorfooter: #414141,
+);
+
 $fondoprincipal1: -webkit-linear-gradient(to right, hsla(28, 85%, 58%, 0.467), hsla(199, 85%, 42%, 0.467));
 $fondoprincipal2: linear-gradient(to right, hsla(28, 85%, 58%, 0.467), hsla(199, 85%, 42%, 0.467));
+
+
+
+@mixin Grid_mobile {
+    width: 100%;
+    max-width: 768px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+        "header"
+        "conte"
+        "footer"
+}
+
+@mixin Grid_desk {
+    width: 100%;
+    max-width: 1500px;
+    height: 210vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "conte conte conte"
+        "footer footer footer";
+}
+

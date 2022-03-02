@@ -44,7 +44,7 @@ footer {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
-        grid-template-areas: "header" "conte" "footer" !important;
+        grid-template-areas: "header" "conte" "footer";
   }
   #contenido {
     width: 100%;
