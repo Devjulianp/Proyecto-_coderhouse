@@ -37,7 +37,8 @@ footer {
 
     #grid,
     #grid__prod,
-    #grid__nos { @include Grid_mobile;
+    #grid__nos {
+        @include Grid_mobile;
     }
 
     #contenido {
@@ -199,9 +200,15 @@ footer {
     .cards .card .texto-card p {
         font-size: 0.6em;
         text-align: center;
-
     }
 
+    .card:hover {
+        background: map-get($style, colortitulos) !important;
+        width: 50% !important;
+        height: 255px !important;
+    }
+
+    
     .form-section,
     .form-section-conta {
         padding: 35px;
@@ -251,7 +258,8 @@ footer {
 
     #grid,
     #grid__prod,
-    #grid__nos { @include Grid_desk;
+    #grid__nos {
+        @include Grid_desk;
     }
 
     .container {
@@ -280,6 +288,7 @@ footer {
 
     .collapse {
         display: flex;
+        justify-content: center;
 
     }
 
@@ -397,6 +406,15 @@ footer {
     .prod-container {
         padding: 40px;
     }
+    
+
+    #accordionExample {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 4em;
+        margin: 3em;
+        gap: 1em;
+    }
 
     .staff {
         display: grid;
@@ -409,7 +427,16 @@ footer {
         font-weight: 200;
         padding-top: 5px;
         font-size: 1em !important;
+    }
 
+    .card {
+        padding: 5%;
+
+        &:hover {
+            background: map-get($style, colortitulos) !important;
+            width: 52% !important;
+            height: 260px !important;            
+        }
     }
 
     .form {
@@ -513,8 +540,13 @@ nav {
     color: #fff !important;
 }
 
+.active:hover {
+    background-color: map-get($style, colortitulos);
+}
+
 .nav-link:hover {
     text-decoration: underline !important;
+    
 }
 
 .navbar-brand {
@@ -615,7 +647,7 @@ nav {
     padding: 30px 0px 30px 0px;
     font-weight: 300;
     text-align: justify;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 /* Productos */
@@ -628,45 +660,29 @@ nav {
     position: relative;
 }
 
-.info-prod {
-    width: 100%;
-    background-image: linear-gradient(to top, hsla(258, 43%, 68%, 0.289) 0%, rgba(0, 91, 209, 0.344)), url(./Assets/engineering.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: grid;
-    justify-content: space-evenly;
-}
 
-.prod-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: inherit;
-    gap: 2em;
-    text-align: center;
-    align-items: center;
-}
-
-.prod-items {
-    list-style: none;
-}
-
-.prod-links {
-    text-decoration: none;
+.accordion-button {
     color: #fff;
-    font-size: 1rem;
+    font-weight: 700 !important;
+    background-color: rgba(121, 206, 221, 0.555);
+    border-radius: 0.8em !important;
+    box-shadow: 0 0 6px 0 rgba(181, 227, 235, 0.452);
 
-    :hover {
-        text-decoration: underline;
+    &:hover {
+        background-color:  rgba(255, 160, 122, 0.521);
     }
 }
 
-.titulo-staff {
-    color: map-get($style, colortitulos);
-    text-align: center;
-    margin: 40px;
-    font-weight: 500;
+.accordion-header{
+    text-align: center !important;
+    margin: 40px !important;
+    font-weight: 500 !important;
+}
+
+.accordion-item {
+    background-color: hsla(0, 0%, 83%, 0.192);
+    border-radius: 10% !important;
+    box-shadow: 0 0 6px 0 rgba(187, 187, 187, 0.671);
 }
 
 .estilo-staff {
@@ -717,7 +733,7 @@ nav {
     justify-content: space-evenly !important;
 
     .card {
-        background: rgb(121, 156, 221);
+        background: rgb(121, 206, 221);
         display: flex;
         flex-wrap: wrap;
         width: 45%;
@@ -726,7 +742,10 @@ nav {
         justify-content: space-evenly;
         border-radius: 5px;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.466) !important;
+        transition: height 1s;
+        transition: width 1s;
 
+        
         img {
             width: 100px;
             height: 100px;
@@ -735,14 +754,14 @@ nav {
             border-radius: 50%;
             display: block;
 
-        
+
         }
     }
 }
 
 .texto-card {
-            width: 60%;
-            color: #fff;
+    width: 60%;
+    color: #fff;
 }
 
 
