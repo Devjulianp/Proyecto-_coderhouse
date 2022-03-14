@@ -409,10 +409,11 @@ footer {
     
 
     #accordionExample {
+        background-color: map-get($style, colorcontenido) !important;
         display: flex;
         justify-content: space-evenly;
         padding: 4em;
-        margin: 3em;
+        margin: 3em 1em;
         gap: 1em;
     }
 
@@ -666,7 +667,7 @@ nav {
     font-weight: 700 !important;
     background-color: rgba(121, 206, 221, 0.555);
     border-radius: 0.8em !important;
-    box-shadow: 0 0 6px 0 rgba(181, 227, 235, 0.452);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
 
     &:hover {
         background-color:  rgba(255, 160, 122, 0.521);
@@ -680,9 +681,9 @@ nav {
 }
 
 .accordion-item {
-    background-color: hsla(0, 0%, 83%, 0.192);
+    
     border-radius: 10% !important;
-    box-shadow: 0 0 6px 0 rgba(187, 187, 187, 0.671);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
 }
 
 .estilo-staff {
